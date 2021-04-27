@@ -29,22 +29,43 @@ namespace CatchMe
         /// </summary>
         private void InitializeComponent()
         {
+            this.buttonMouse = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // buttonMouse
+            // 
+            this.buttonMouse.BackgroundImage = global::CatchMe.Properties.Resources.jerry;
+            this.buttonMouse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonMouse.Location = new System.Drawing.Point(355, 222);
+            this.buttonMouse.Name = "buttonMouse";
+            this.buttonMouse.Size = new System.Drawing.Size(40, 40);
+            this.buttonMouse.TabIndex = 0;
+            this.buttonMouse.UseVisualStyleBackColor = true;
+            this.buttonMouse.Click += new System.EventHandler(this.button1_Click);
+            this.buttonMouse.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonMouse_MouseMove);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.MinimumSize = new System.Drawing.Size(300, 300);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackgroundImage = global::CatchMe.Properties.Resources.tom;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(784, 462);
+            this.Controls.Add(this.buttonMouse);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DoubleBuffered = true;
+            this.MaximumSize = new System.Drawing.Size(800, 500);
+            this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Tom and Jerry";
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button buttonMouse;
     }
 }
 
