@@ -63,16 +63,6 @@ namespace CatchMe.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _catch {
-            get {
-                object obj = ResourceManager.GetObject("catch", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap jerry {
             get {
                 object obj = ResourceManager.GetObject("jerry", resourceCulture);

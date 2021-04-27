@@ -79,11 +79,11 @@ namespace CatchMe
         {
             if (buttonMouse.Location.X < 40 && buttonMouse.Location.Y < 40)
                 return true;
-            if (buttonMouse.Location.X + 20 > Width - 60 && buttonMouse.Location.Y < 40)
+            if (buttonMouse.Location.X + 40 > Width - 50 && buttonMouse.Location.Y < 40)
                 return true;
-            if (buttonMouse.Location.X < 40 && buttonMouse.Location.Y + 20 > Height - 90)
+            if (buttonMouse.Location.X < 40 && buttonMouse.Location.Y + 40 > Height - 70)
                 return true;
-            if (buttonMouse.Location.X + 20 > Width - 60 && buttonMouse.Location.Y + 20 > Height - 90)
+            if (buttonMouse.Location.X + 40 > Width - 50 && buttonMouse.Location.Y + 40 > Height - 70)
                 return true;
             return false;
 

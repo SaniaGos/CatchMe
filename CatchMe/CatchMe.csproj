@@ -82,9 +82,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\catch.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\jerry.jpg" />
   </ItemGroup>
   <ItemGroup>
