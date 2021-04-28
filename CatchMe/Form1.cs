@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace CatchMe
@@ -131,6 +131,31 @@ namespace CatchMe
             {
                 ChooseDoor();
             }
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                contextMenuStrip1.Show(new Point(this.Location.X + e.X, this.Location.Y + e.Y + 20));
+        }
+
+        private void StripMenu_Click(object sender, EventArgs e)
+        {
+            this.MouseMove -= new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
+            this.buttonMouse.MouseMove -= new System.Windows.Forms.MouseEventHandler(this.buttonMouse_MouseMove);
+            timer.Start();
+        }
+
+        private void contextMenuStrip1_MouseLeave(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Close();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            timer.Stop();
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
+            this.buttonMouse.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonMouse_MouseMove);
         }
     }
 }

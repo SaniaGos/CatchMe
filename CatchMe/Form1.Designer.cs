@@ -29,7 +29,12 @@ namespace CatchMe
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonMouse = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.StripMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonMouse
@@ -43,6 +48,26 @@ namespace CatchMe
             this.buttonMouse.UseVisualStyleBackColor = true;
             this.buttonMouse.Click += new System.EventHandler(this.button1_Click);
             this.buttonMouse.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonMouse_MouseMove);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StripMenu});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(255, 48);
+            this.contextMenuStrip1.MouseLeave += new System.EventHandler(this.contextMenuStrip1_MouseLeave);
+            // 
+            // StripMenu
+            // 
+            this.StripMenu.Name = "StripMenu";
+            this.StripMenu.Size = new System.Drawing.Size(254, 22);
+            this.StripMenu.Text = "Заморозити мишу на чверть сек";
+            this.StripMenu.Click += new System.EventHandler(this.StripMenu_Click);
+            // 
+            // timer
+            // 
+            this.timer.Interval = 250;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // Form1
             // 
@@ -58,7 +83,9 @@ namespace CatchMe
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tom and Jerry";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -66,6 +93,9 @@ namespace CatchMe
         #endregion
 
         private System.Windows.Forms.Button buttonMouse;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem StripMenu;
+        private System.Windows.Forms.Timer timer;
     }
 }
 
